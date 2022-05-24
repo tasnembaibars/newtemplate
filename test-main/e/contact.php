@@ -63,7 +63,10 @@ https://templatemo.com/tm-559-Animall-shop
     </div>
 
     <!-- Start Map -->
-    <div id="mapid" style="width: 100%; height: 300px;"></div>
+    <div class="container-fluid bg-light">
+        <div class="col-md-12 m-auto text-center">
+    <div  style="width: 100%; height: 300px;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3385.1668852370067!2d35.86207431491083!3d31.956368981227417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x243d3fc7d15078c8!2zMzHCsDU3JzIyLjkiTiAzNcKwNTEnNTEuNCJF!5e0!3m2!1sen!2sjo!4v1653377295811!5m2!1sen!2sjo" width="100%" height="370" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div></div>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
     <script>
         var mymap = L.map('mapid').setView([-23.013104, -43.394365, 13], 13);
@@ -77,15 +80,14 @@ https://templatemo.com/tm-559-Animall-shop
             tileSize: 512,
             AnimallOffset: -1
         }).addTo(mymap);
-
-        L.marker([-23.013104, -43.394365, 13]).addTo(mymap)
+       
+        L.marker([ 31.955724,  35.864930]).addTo(mymap)
             .bindPopup("<b>Animall</b> eCommerce Template<br />Location.").openPopup();
 
         mymap.scrollWheelAnimall.disable();
         mymap.touchAnimall.disable();
     </script>
     <!-- Ena Map -->
-
     <!-- Start Contact -->
     <div class="container py-5">
         <div class="row py-5">

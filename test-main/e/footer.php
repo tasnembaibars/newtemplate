@@ -4,7 +4,7 @@
          <div class="row">
 
              <div class="col-md-4 pt-5">
-                 <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                 <h2 class="h2 text-success border-bottom pb-3 border-light logo">Animall store</h2>
                  <ul class="list-unstyled text-light footer-link-list">
                      <li>
                          <i class="fas fa-map-marker-alt fa-fw"></i>
@@ -83,7 +83,7 @@
                  <div class="col-12">
                      <p class="text-left text-light">
                          Copyright &copy; 2021 Animall store
-                         | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                         | Designed by <a rel="sponsored" href="https://animallstore.com" target="_blank">animallstore</a>
                      </p>
                  </div>
              </div>

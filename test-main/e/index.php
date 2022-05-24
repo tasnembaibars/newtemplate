@@ -51,7 +51,7 @@ require "navbar.php";
                                 <a rel="sponsored" class="text-success" href="https://unsplash.com/" target="_blank"></a>
                                 <a rel="sponsored" class="text-success" href="https://icons8.com/" target="_blank"></a>
                             </p>
-                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#92b9ba;font-size:35px;"> Shop now</a></button>
+                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#5a7578;font-size:35px;"> Shop now</a></button>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ require "navbar.php";
                             <p>
                                 “There’s a saying. If you want someone to love you<strong> forever</strong> , buy a dog, feed it and keep it around.”
                             </p>
-                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#92b9ba;font-size:35px;"> Shop now</a></button></div>
+                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#5a7578;font-size:35px;"> Shop now</a></button></div>
 
                         </div>
 
@@ -92,7 +92,7 @@ require "navbar.php";
                             <p>
                                 “Until one has loved an animal, a part of one's soul remains unawakened.”
                             </p>
-                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#92b9ba;font-size:35px;"> Shop now</a></button></div>
+                            <div> <button style="border:1px solid  white;width:160px;margin:1% auto;"><a href="categories.php" style="text-decoration: none;color:#5a7578;font-size:35px;"> Shop now</a></button></div>
 
                         </div>
                     </div>

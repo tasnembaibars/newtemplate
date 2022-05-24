@@ -34,7 +34,7 @@ body, ul, li, p, a, label, input, div {
   font-size: 18px !important;
   font-weight: 300 !important;
   text-decoration: none;
-  color:#3a6263;
+  color:#84b0b5;
 }
 
 .h1 {
@@ -55,7 +55,7 @@ body, ul, li, p, a, label, input, div {
 .logo { font-weight: 500 !important;}
 .text-warning {  color: #ede861 !important;}
 .text-muted { color: #bcbcbc !important;}
-.text-success { color: #7c9fa3 !important;}
+.text-success { color: #84b0b5 !important;}
 .text-light { color: #e1e4e8 !important;}
 .bg-dark { background-color: #2e3d50 !important;}
 .bg-light { background-color: #d4e4e547 !important;}
@@ -141,7 +141,7 @@ body, ul, li, p, a, label, input, div {
 .form-control { border: 1px solid #e8e8e8;}
 /* Footer */
 #tempaltemo_footer a { color: #dcdde1;}
-#tempaltemo_footer a:hover { color: #68bb7d;}
+#tempaltemo_footer a:hover { color: #84b0b5;}
 #tempaltemo_footer ul.footer-link-list li { padding-top: 10px;}
 #tempaltemo_footer ul.footer-icons li {
   width: 2.6em;
