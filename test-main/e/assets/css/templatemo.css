@@ -34,7 +34,7 @@ body, ul, li, p, a, label, input, div {
   font-size: 18px !important;
   font-weight: 300 !important;
   text-decoration: none;
-  color:#84b0b5;
+  color:#559697;
 }
 
 .h1 {
@@ -116,6 +116,14 @@ body, ul, li, p, a, label, input, div {
 .brand-img:hover {
   filter: grayscale(0%);
   opacity: 1;
+}
+
+#cart-im{
+  height: 80px;
+  width: 80px;
+}
+#del-btn{
+  float: left;
 }
 /* Carousel Hero */
 #template-mo-Animall-hero-carousel .carousel-indicators li {

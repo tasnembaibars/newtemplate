@@ -110,7 +110,7 @@ require "navbar.php";
                             <tr>
 
                                 <td><?php echo $product['product_name'] ?></td>
-                                <td><img src="./admin/cart/public/<?php echo $product['product_main_image'] ?>" width="90px";height="120px"></td>
+                                <td><img src="./admin/products/public/<?php echo $product['product_main_image'] ?>" id="cart-im"></td>
                                 <td><?php echo $product['product_price'] ?></td>
 
                                 <td>
@@ -122,7 +122,7 @@ require "navbar.php";
                                         ?><h5 id="cart-total-price" style="font-size:18px">$<?php echo  $total ?></h5>
                                 </td>
                                 <!-- <?php var_dump($product)  ?> -->
-                                <td><button type="button" name="delete" class="btn btn-outline-secondary  btn-sm " > <a href="cart.php?delete=<?php echo $product['product_f_id'] ?>"><i class="fa-solid fa-xmark" aria-hidden="true" style="color: #709192;"></i></a></button></td>
+                                <td><button type="button" name="delete" id="del-btn" class="btn btn-outline-secondary  btn-sm " > <a href="cart.php?delete=<?php echo $product['product_f_id'] ?>"><i class="fa-solid fa-xmark" aria-hidden="true" style="color: #709192;"></i></a></button></td>
 
                             </tr>
 
