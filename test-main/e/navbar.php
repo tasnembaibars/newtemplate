@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <!-- <link rel="stylesheet" href="assets/css/fontawesome.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-<!--
+    <!--
     
 TemplateMo 559 Animall Shop
 
@@ -25,9 +25,10 @@ https://templatemo.com/tm-559-Animall-shop
 
 -->
 </head>
+
 <body>
     <!-- Start Top Nav -->
-<nav class="navbar navbar-expand-lg  navbar-light d-none d-lg-block" style="background-color:#92b9ba ;" id="templatemo_nav_top">
+    <nav class="navbar navbar-expand-lg  navbar-light d-none d-lg-block" style="background-color:#92b9ba ;" id="templatemo_nav_top">
         <div class="container text-light">
             <div class="w-100 d-flex justify-content-between">
                 <div>
@@ -46,11 +47,12 @@ https://templatemo.com/tm-559-Animall-shop
         </div>
     </nav>
 
-   
+
     <!-- Close Top Nav -->
 
 
     <!-- Header -->
+ 
     <nav class="navbar navbar-expand-lg navbar-light shadow">
         <div class="container d-flex justify-content-between align-items-center">
 
@@ -68,7 +70,7 @@ https://templatemo.com/tm-559-Animall-shop
                         <li class="nav-item">
                             <a class="nav-link" href="index.php">Home</a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">About</a>
                         </li>
@@ -94,7 +96,18 @@ https://templatemo.com/tm-559-Animall-shop
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="cart.php">
                         <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
-                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">7</span>
+                        
+                        <?php try {
+                            $orders = $db->prepare("SELECT product_quantity FROM cart ");
+                            $orders->execute();
+                            $products = $orders->rowCount();
+                        } catch (PDOExeption $err) {
+                            echo $err->getMessage();
+                        } ?> 
+                        <?php $count=0; ?>
+                         <?php $count+=$products ?>
+                        <span class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"> <?php echo $products ;  ?></span>
+          
                     </a>
                     <a class="nav-icon position-relative text-decoration-none" href="#">
                         <i class="fa fa-fw fa-user text-dark mr-3"></i>

@@ -1,13 +1,14 @@
 <?php
 require "config.php";
+session_start();
 require "navbar.php";
-
+// session_start();
 ?>
 <!doctype html>
 <html lang="en">
 
 <head>
-<title>Animall Shop - About Page</title>
+    <title>Animall Shop - About Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,7 +26,7 @@ require "navbar.php";
 </head>
 
 <body>
-    
+
     <!--  defining variables & Select-->
     <?php
     $user_f_id  = (isset($_POST['user_f_id ']) ? $_POST['user_f_id '] : '');
@@ -42,7 +43,7 @@ require "navbar.php";
     $coupon_text = (isset($_POST['coupon_text']) ? $_POST['coupon_text'] : '');
     $coupon_percent = (isset($_POST['coupon_percent']) ? $_POST['coupon_percent'] : '');
     $coupon_id = (isset($_POST['coupon_id']) ? $_POST['coupon_id'] : '');
-    $sum= (isset($_SESSION['sum']) ? $_SESSION['sum'] : '');
+    $sum = (isset($_SESSION['sum']) ? $_SESSION['sum'] : '');
     $grand_total = 0;
     $total = 0;
     $sum = 0;
@@ -58,23 +59,23 @@ require "navbar.php";
     } catch (PDOExeption $err) {
         echo $err->getMessage();
     }
-  
+
 
     if (isset($_POST['cart_id']) && empty($_POST['cart_id'])) {
         echo 'Your shopping cart is empty.';
     }
     ?>
-       
+
     <div class="section">
         <!-- container -->
         <div class="container mt-5">
             <form action="edit.php" method="POST">
-       
+
                 <!-- <div style="margin-top:20px;font: size 30px; "> <strong> Hello </strong><?php ?></div> -->
 
                 <table class="table table-bordered table-hover table-md h5" name="SHOPPING_CART">
                     <thead>
-                        <tr style="background-color:#d4e4e547;">
+                        <tr style="background-color:#d4e4e547;text-align:center;">
 
                             <th scope="col">Item name</th>
                             <th scope="col">Image</th>
@@ -85,29 +86,29 @@ require "navbar.php";
                         </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                    $attempt = $db->query('SELECT * FROM cart');
-                    $row =$attempt->fetchAll(PDO::FETCH_ASSOC);
-                    ?>
-                    <?php  if(empty($row)) :?>
-                        <tr>
-                       <td colspan="6" style="text-align:center ;"> your cart is empty. </td>
+                        <?php
+                        $attempt = $db->query('SELECT * FROM cart');
+                        $row = $attempt->fetchAll(PDO::FETCH_ASSOC);
+                        ?>
+                        <?php if (empty($row)) : ?>
+                            <tr>
+                                <td colspan="6" style="text-align:center;"> your cart is empty. </td>
                             </tr>
-                        <?php endif;?>
-                    
+                        <?php endif; ?>
 
-                   
+
+
                         <?php
                         if (isset($_GET['delete'])) {
                             $product_f_id = $_GET['delete'];
                             $sql = ("DELETE FROM `cart` WHERE  product_f_id =$product_f_id");
-                            $stat = $pdoconnect->query($sql);
+                            $stat = $db->query($sql);
                         } ?>
                         <?php $_SESSION['sum'] = $sum;
                         $_SESSION['grand_total'] = $grand_total; ?>
                         <?php foreach ($products as $product) : ?>
 
-                            <tr>
+                            <tr style="text-align:center;">
 
                                 <td><?php echo $product['product_name'] ?></td>
                                 <td><img src="./admin/products/public/<?php echo $product['product_main_image'] ?>" id="cart-im"></td>
@@ -122,12 +123,12 @@ require "navbar.php";
                                         ?><h5 id="cart-total-price" style="font-size:18px">$<?php echo  $total ?></h5>
                                 </td>
                                 <!-- <?php var_dump($product)  ?> -->
-                                <td><button type="button" name="delete" id="del-btn" class="btn btn-outline-secondary  btn-sm " > <a href="cart.php?delete=<?php echo $product['product_f_id'] ?>"><i class="fa-solid fa-xmark" aria-hidden="true" style="color: #709192;"></i></a></button></td>
+                                <td><button type="button" name="delete" id="del-btn" class="btn btn-outline-secondary  btn-sm "> <a href="cart.php?delete=<?php echo $product['product_f_id'] ?>"><i class="fa-solid fa-xmark" aria-hidden="true" style="color: #709192;"></i></a></button></td>
 
                             </tr>
 
                         <?php endforeach ?>
-                        <tr>
+                        <tr style="text-align:center;">
                             <?php
                             $statement = $db->prepare("SELECT * FROM coupons  ");
                             $statement->execute();
@@ -155,63 +156,76 @@ require "navbar.php";
             </form>
 
 
+            <div class="container">
 
-            <div class="row g-3 align-items-center" style="margin-left:5vw;">
+                <div class="row g-3 align-items-center">
+                    <div class="col-4">
+
+                    </div>
+                </div>
+
+
+                <span id="passwordHelpInline" class="form-text " style="font-size: 20px;">
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
                 <form action="" method="GET">
-                    <div class="col-auto">
+                    <div class="col-auto " style="width:500px ;">
 
                         <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline" placeholder="Add Coupon here" name="discount" value="" style="font-size:17px">
                     </div>
 
                     <!-- <?php foreach ($coupons as $coupon) : ?> -->
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-success my-3 " style="  color: #fff; background-color:#709192 !important; border-color: #709192;font-size:15px;" name="apply">Apply Coupon</button>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-success my-3 " style="  color: #fff; background-color:#709192 !important; border-color: #709192;font-size:15px;width:300px" name="apply">Apply Coupon</button>
 
-                            <!-- <a href="cart.php?coupon=<?php echo $coupon['coupon_id'] ?>" style="text-decoration: none;color:white;font-size:17px"></a> -->
+                        <!-- <a href="cart.php?coupon=<?php echo $coupon['coupon_id'] ?>" style="text-decoration: none;color:white;font-size:17px"></a> -->
 
-                             
 
-                        
-
-                        </div>
-                        <!-- <?php break; ?>
+                    </div>
+                    <!-- <?php break; ?>
 
                     <?php endforeach; ?> -->
+                </form>
+            </div>
+            <div class="col-sm-8">
+
+                </span>
+
+                <div class="card mb-5 border  " style="width: 36rem;float:right;">
+                    <div class="card-header" style="color:#245152 ;">
+                        discount
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"> <span style="color:#245152 ;"> Total before discount :</span> $<?php echo $grand_total; ?> </li>
+                        <?php
+
+                        if (isset($_GET['apply'])) {
+
+                            if ($_GET['discount'] ===  'ahmad123') {
+
+                                $grand_total = $grand_total - ($grand_total * 20 / 100);
+                              
+                            } else {
+                                echo 'invalid coupon';
+  
+                            }
+                        }
+                        $_SESSION['sum'] = $grand_total;
+
+                        ?>
+                        <li class="list-group-item"> <span style="color:#245152 ;">Total after discount :</span> $<?php echo $grand_total ?></li>
+                        <!-- <li class="list-group-item"><span style="color:#245152 ;">Total Amount Discounted :</span> $<?php echo $grand_total-($grand_total * 20 / 100); ?> </li> -->
+                    </ul>
+                </div>
             </div>
 
-      </form>
-      <span id="passwordHelpInline" class="form-text " style="font-size: 20px;">   
-      <?php
-
-if (isset($_GET['apply'])) {
- 
-    if ($_GET['discount'] ===  'ahmad123') {
-
-        $sum = $grand_total - ($grand_total * 20 / 100) ;
-        // echo 'Total Amount after discount :'. '$'.$sum;
-    } else {
-        echo 'invalid coupon';
-        // echo 'Total Amount :'.'$' . $sum = $grand_total;
-
-    }
-}
-$_SESSION['sum']=$sum;
-
-?>
-    </span>
-    <div class="card my-5" style="width: 22rem;">
-  <div class="card-header">
-    discount
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Total before discount : $<?php echo $grand_total; ?> </li>
-    <li class="list-group-item">Total after discount : $ <?php echo $sum ?></li>
-    <li class="list-group-item">Amount discounted : $ <?php echo $grand_total-$sum ; ?> </li>
-  </ul>
-</div>
         </div>
     </div>
-  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

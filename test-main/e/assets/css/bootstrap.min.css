@@ -637,7 +637,7 @@ progress {
 
 .row>* {
     flex-shrink: 0;
-    width: 100%;
+    width: 50%;
     max-width: 100%;
     padding-right: calc(var(--bs-gutter-x)/ 2);
     padding-left: calc(var(--bs-gutter-x)/ 2);
@@ -3237,9 +3237,10 @@ textarea.form-control-lg {
 }
 
 .btn-outline-secondary:hover {
-    color: #fff;
-    background-color: #6c757d;
-    border-color: #6c757d
+
+    color: #ffff;
+    background-color: #629292a3;
+    border-color: #629292
 }
 
 .btn-check:focus+.btn-outline-secondary, .btn-outline-secondary:focus {
@@ -4915,7 +4916,8 @@ textarea.form-control-lg {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    border-radius: .25rem
+    border-radius: .25rem;
+    border-color:gray;
 }
 
 .list-group-item-action {
@@ -6650,9 +6652,9 @@ textarea.form-control-lg {
     transform: translateY(-50%) !important
 }
 
-.border {
+/* .border {
     border: 1px solid #dee2e6 !important
-}
+} */
 
 .border-0 {
     border: 0 !important
@@ -7241,7 +7243,8 @@ textarea.form-control-lg {
 }
 
 .p-5 {
-    padding: 3rem !important
+    padding: 3rem !important;
+    margin-top: 4rem;
 }
 
 .px-0 {

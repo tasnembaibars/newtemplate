@@ -147,13 +147,13 @@ https://templatemo.com/tm-559-Animall-shop
                                                 <a href="#"><img class="img-fluid brand-img" src="images/care1.jpg" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-0">
-                                                <a href="#"><img class="img-fluid brand-img" src="images/care2.webp" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="images/soil1.PNG" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-0">
                                                 <a href="#"><img class="img-fluid brand-img" src="images/care3.webp" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-0">
-                                                <a href="#"><img class="img-fluid brand-img" src="images/care4.webp" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="images/soil2.PNG" alt="Brand Logo"></a>
                                             </div>
                                         </div>
                                     </div>
@@ -172,7 +172,7 @@ https://templatemo.com/tm-559-Animall-shop
                                                 <a href="#"><img class="img-fluid brand-img" src="images/care7.jfif" alt="Brand Logo"></a>
                                             </div>
                                             <div class="col-3 p-md-5">
-                                                <a href="#"><img class="img-fluid brand-img" src="images/care8.webp" alt="Brand Logo"></a>
+                                                <a href="#"><img class="img-fluid brand-img" src="images/soil3.PNG" alt="Brand Logo"></a>
                                             </div>
                                         </div>
                                     </div>

@@ -34,7 +34,7 @@ body, ul, li, p, a, label, input, div {
   font-size: 18px !important;
   font-weight: 300 !important;
   text-decoration: none;
-  color:#559697;
+  color:#477878;
 }
 
 .h1 {
@@ -56,7 +56,7 @@ body, ul, li, p, a, label, input, div {
 .text-warning {  color: #ede861 !important;}
 .text-muted { color: #bcbcbc !important;}
 .text-success { color: #84b0b5 !important;}
-.text-light { color: #e1e4e8 !important;}
+.text-light { color: #fbfcfe !important;}
 .bg-dark { background-color: #2e3d50 !important;}
 .bg-light { background-color: #d4e4e547 !important;}
 .bg-black { background-color: #1d242d !important;}
@@ -70,11 +70,12 @@ body, ul, li, p, a, label, input, div {
   background-color: #709192;
   color: #fff;
 }
+
 /* Nav */
 #templatemo_nav_top { min-height: 40px;}
 #templatemo_nav_top * { font-size: 1em !important;}
-#templatemo_main_nav a { color: #92b9ba;}
-#templatemo_main_nav a:hover { color: #69bb7e;}
+#templatemo_main_nav a { color: #6a8283;}
+#templatemo_main_nav a:hover { color: #5e7c7c;}
 #templatemo_main_nav .navbar .nav-icon { margin-right: 20px;}
 
 /* Hero Carousel */
@@ -123,7 +124,7 @@ body, ul, li, p, a, label, input, div {
   width: 80px;
 }
 #del-btn{
-  float: left;
+ float: inherit;
 }
 /* Carousel Hero */
 #template-mo-Animall-hero-carousel .carousel-indicators li {
@@ -164,7 +165,7 @@ body, ul, li, p, a, label, input, div {
   color: #92b9ba;
   transition: .5s;
 }
-#tempaltemo_footer .border-light { border-color: #2d343f !important;}
+#tempaltemo_footer .border-light { border-color: #eaedf0 !important;}
 /*
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default in Bootstrap
@@ -190,7 +191,7 @@ body, ul, li, p, a, label, input, div {
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   #templatemo_main_nav .navbar-nav {max-width: 550px;}
-  #template-mo-Animall-hero-carousel .carousel-item {min-height: 30rem !important;}
+  #template-mo-Animall-hero-carousel .carousel-item {min-height: 40rem !important;}
   .product-wap .h3, .product-wap li, .product-wap i, .product-wap p {font-size: 18px !important;}
   .product-wap .product-color-dot {
     width: 12px;
